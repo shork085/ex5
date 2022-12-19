@@ -1,0 +1,229 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family: 'FZQKBYSJW';
+    src: url('../CSS/fonts/FZQKBYSJW.TTF');
+}
+#main {
+    position: relative;
+    width: 640px;
+    height: 1030px;
+    margin: 0px auto;
+    /* background-color: aqua; */
+    /* background: url("/CSS/img/bg.jpg") no-repeat; */
+    background: url("../CSS/img/bg.png") no-repeat;
+    background-position: 0px -48px;
+    background-size: 108%;
+    overflow: hidden;
+}
+img {
+    position: absolute;
+    width: 2%;
+    bottom: 250px;
+    left: 20px;
+}
+
+#wool {
+    position: absolute;
+    width: 60%;
+    height: 28%;
+    /* background-color: aquamarine; */
+    background: url("../CSS/img/wool.png") no-repeat;
+    background-size: 100%;
+    top: 3%;
+    left: 0%;
+    animation: wool 1s  linear infinite;
+}
+#light {
+    position: absolute;
+    width: 25%;
+    height: 13%;
+    /* background-color: aquamarine; */
+    background: url("../CSS/img/light.png") no-repeat;
+    background-size: 100%;
+    right: 2%;
+    animation: blink 1s linear infinite;
+}
+
+/* 背景羊毛和玻璃光动画 */
+@keyframes wool {
+    0%{transform: rotate(0deg);}
+    25%{transform: rotate(-2deg);}
+    50%{transform: rotate(0deg);}
+    75%{transform: rotate(2deg);}
+    100%{transform: rotate(0deg);}
+}
+@keyframes blink {
+    0%{transform: rotate(0deg);}
+    25%{transform: rotate(-2deg);}
+    50%{transform: rotate(0deg);}
+    75%{transform: rotate(2deg);}
+    100%{transform: rotate(0deg);}
+}
+
+
+#head {
+    position: absolute;
+    width: 60%;
+    height: 11%;
+    /* background-color: cadetblue; */
+    background: url("../CSS/img/head.png") no-repeat;
+    background-size: 100%;
+    top: 12%;
+    right: 10%;
+    z-index: 1;
+}
+#head p {
+    position: absolute;
+    font-size: 60px;
+    /* font-weight: bold; */
+    font-family: "STHupo";
+    top: 20%;
+    left: 20%;
+}
+#subtitle {
+    position: absolute;
+    width: 29%;
+    height: 11%;
+    /* background-color: burlywood; */
+    background: url("../CSS/img/subtitle.png") no-repeat;
+    background-size: 100%;
+    top: 25%;
+    left: 10%;
+    z-index: 1;
+}
+#yg {
+    position: absolute;
+    width: 95%;
+    height: 81%;
+    /* background-color: bisque; */
+    background: url("../CSS/img/yg.png") no-repeat;
+    background-size: 100%;
+    background-position: 0px -185px;
+    bottom: 0;
+    right: 0;
+}
+#yg li {
+    /* float: left; */
+    position: absolute;
+    display: inline-block;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    list-style: none;
+}
+#yg li:hover {
+    transform: scale(1.1);
+    -webkit-tap-highlight-color: transparent;
+}
+#c1 {
+    width: 56%;
+    height: 69%;
+    /* background-color: brown; */
+    background: url("../CSS/img/1.png");
+    top: 15%;
+    right: -53%;
+    /* left: 10%; */
+    animation: c1 1s ease;
+    animation-fill-mode: forwards;
+}
+#c2 {
+    width: 47%;
+    height: 61%;
+    /* background-color: blueviolet; */
+    background: url("../CSS/img/2.png");
+    top: 20%;
+    right: -46%;
+    animation: c2 1s ease;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+#c3 {
+    width: 51%;
+    height: 60%;
+    /* background-color: blue; */
+    background: url("../CSS/img/3.png");
+    background-position-x: -148px;
+    top: 15%;
+    right: -51%;
+    animation: c3 1s ease;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+/* 衣服动画效果 */
+@keyframes c1 {
+    0%{right: -53%;}
+    100%{right: 34%;}
+}
+@keyframes c2 {
+    0%{right: -46%;}
+    100%{right: 8%;}
+}
+@keyframes c3 {
+    0%{right: -51%;}
+    100%{right: -25%;}
+}
+
+#sheep {
+    position: absolute;
+    width: 31%;
+    height: 15%;
+    /* background-color: bisque; */
+    background: url("../CSS/img/click.png") no-repeat;
+    background-size: 100%;
+    bottom: 0px;
+    left: 3%;
+}
+
+#btn {
+    position: absolute;
+    width: 22%;
+    height: 14%;
+    border-radius: 50%;
+    /* border: 5px solid black; */
+    /* background-color: #CCBB94; */
+    background: url("../CSS/img/start.png") no-repeat;
+    background-size: 100%;
+    bottom: 3%;
+    right: 8%;
+    transform-origin: 50% 49%;
+    animation: btn 5s linear infinite;
+    animation-direction: alternate;
+}
+
+#begin {
+    position: absolute;
+    width: 16%;
+    height: 9%;
+    border-radius: 50%;
+    /* background-color: aquamarine; */
+    background: url("../CSS/img/begin.png") no-repeat;
+    background-size: 91%;
+    background-position: center;
+    bottom: 5.7%;
+    right: 11%;
+}
+#begin a {
+    -webkit-tap-highlight-color: transparent;
+    position: absolute;
+    display: inline-block;
+    width: 55%;
+    height: 45%;
+    text-decoration: none;
+    text-align: center;
+    font-size: 25px;
+    color: black;
+    /* line-height: 90px; */
+    font-weight: 700;
+    top: 22%;
+    left: 23%;
+    font-family: "FZQKBYSJW";
+}
+
+/* 按钮动画效果 */
+@keyframes btn {
+    100%{transform: rotate(360deg) scale(1.1);}
+}
